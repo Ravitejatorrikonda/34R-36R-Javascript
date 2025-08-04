@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let options={
+        //      "method":"POST",
+        //      "headers":{
+        //          "Context-Text":"application/json"
+        //      },
+        //      "body":JSON.stringify({
+        //         "id":4,
+        //         "name":"Vamsi"
+        //      })
+
+        // }
+        // fetch("http://localhost:3000/students",options)
+        // .then(response=>{
+        //     if(response.ok){
+        //         console.log("data submitted");
+                
+        //     }else{
+        //         console.log("Data not enter");
+                
+        //     }
+        // }).catch(data=>console.log("error")
+        // )
+        
+fetch("http://localhost:3000/students",{
+    "method":"POST",
+    "headers":{
+        "Context-Text":"application/json"
+    },
+    "body":JSON.stringify({
+        "id":5,
+        "name":"akhila"
+    })
+}).then(response=>{
+    if(response.ok){
+        console.log("data submited")
+    }else{
+        console.log("data Not enter");
+        
+    }
+}).catch(data=>console.log("error"))
+
+    </script>
+</body>
+</html>
